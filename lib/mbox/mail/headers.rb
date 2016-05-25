@@ -144,9 +144,9 @@ class Headers
 				last       = name
 			elsif last && self[last]
 				if self[last].is_a?(String)
-					self[last] << " #{line.strip}"
+					self[last] << "#{line.strip}"
 				elsif self[last].is_a?(Array) && self[last].last.is_a?(String)
-					self[last].last << " #{line.strip}"
+					self[last].last << "#{line.strip}"
 				end
 			end
 		end
