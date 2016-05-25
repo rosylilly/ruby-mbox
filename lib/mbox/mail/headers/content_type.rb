@@ -25,7 +25,7 @@ class ContentType
 
 		return ContentType.new unless text && text.is_a?(String)
 
-		stuff = text.gsub(/\n\r/, '').split(/\s*;\s*/)
+		stuff = text.gsub(/\s+/, '').split(/\s*;\s*/)
 		type  = stuff.shift
 
 		ContentType.new(Hash[stuff.map {|s|
